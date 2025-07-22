@@ -1,13 +1,14 @@
 import { Component } from '@angular/core';
 import { CountdownComponent } from './countdown.component';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CountdownComponent],
+  imports: [CountdownComponent, TranslateModule],
   template: `
     <section class="hero">
-      <h1 class="movie-title">movie-name</h1>
+      <h1 class="movie-title">{{ 'MOVIE_TITLE' | translate }}</h1>
       <h2 class="release-date">Premieres July 25, 2025</h2>
       <div class="countdown-timer">
         <app-countdown></app-countdown>
@@ -25,4 +26,9 @@ import { CountdownComponent } from './countdown.component';
   `,
   styleUrls: ['./app.component.scss']
 })
-export class HomeComponent {}
+export class HomeComponent {
+  constructor(private translate: TranslateService) {
+    translate.setDefaultLang('en');
+    translate.use('en'); // Switch dynamically
+  }
+}
