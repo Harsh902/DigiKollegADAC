@@ -8,10 +8,9 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
   imports: [CountdownComponent, TranslateModule],
   template: `
     <section class="hero">
-      <h1 class="movie-title">{{ 'MOVIE_TITLE' | translate }}</h1>
-      <h2 class="release-date">Premieres July 25, 2025</h2>
       <div class="countdown-timer">
         <app-countdown></app-countdown>
+        <h2 class="release-date">Premieres July 25, 2025</h2>
       </div>
       <div class="signup-box">
         <h3>Sign up to get notified when the movie is out!</h3>
