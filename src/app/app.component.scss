@@ -1,14 +1,28 @@
+.signup-inner-box {
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  max-width: 420px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.signup-box {
+  margin-top: 4rem;
+}
 .signup-box h3 {
   color: #00205b;
 }
 // Match release-date and signup-box text color to countdown color
-.release-date h2 {
+.release-date, .signup-box h3 {
   color: #00205b;
 }
 // Home hero section alignment
 .hero {
-  margin-right: 33rem;
-  text-align: left;
+  margin-right: 1rem;
+  text-align: center;
 }
 
 @import 'C:/Users/Amit/DigiKolleg/movie-name/src/styles.scss';
