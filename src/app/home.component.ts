@@ -11,6 +11,9 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
       <div class="countdown-timer">
         <app-countdown></app-countdown>
       </div>
+            <div class="release-date">
+        <h2>Premieres July 25, 2025</h2>
+      </div>
       <div class="signup-box">
         <div class="signup-inner-box">
           <h3>Sign up to get notified when the movie is out!</h3>
@@ -21,9 +24,6 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
             </form>
           </div>
         </div>
-      </div>
-      <div class="release-date">
-        <h2>Premieres July 25, 2025</h2>
       </div>
     </section>
   `,

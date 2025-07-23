@@ -1,3 +1,34 @@
+.mailchimp-form input[type="email"] {
+  display: block;
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.6rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+.mailchimp-form button[type="submit"] {
+  display: block;
+  width: 100%;
+  margin-top: 0;
+}
+.mailchimp-form button[type="submit"] {
+  background: #e2001a;
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.6rem 1.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.mailchimp-form button[type="submit"]:hover {
+  background: #ffe600;
+  color: #00205b;
+}
 .signup-inner-box {
   background: #fff;
   border-radius: 1rem;
