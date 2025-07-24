@@ -6,6 +6,7 @@ import { provideHttpClient, withFetch } from '@angular/common/http';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { HttpClient } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { provideAnimations } from '@angular/platform-browser/animations';
 
 // Factory for translation loader
 export function HttpLoaderFactory(http: HttpClient) {
@@ -18,6 +19,7 @@ export const appConfig: ApplicationConfig = {
     provideClientHydration(),
     provideHttpClient(withFetch()),
     provideRouter(routes),
+    provideAnimations(),
     importProvidersFrom(
       TranslateModule.forRoot({
         loader: {

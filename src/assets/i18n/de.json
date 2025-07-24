@@ -1,7 +1,14 @@
 {
-  "MOVIE_TITLE": "Filmtitel",
-  "RELEASE_DATE": "Premiere am 25. Juli 2025",
-  "SIGNUP_TITLE": "Melde dich an, um benachrichtigt zu werden, wenn der Film erscheint!",
+  "MOVIE_TITLE": "Kurzfilm",
+  "RELEASE_DATE": "Premiere am 16. Oktober 2025",
+  "SIGNUP_TITLE": "Melden Sie sich an, um benachrichtigt zu werden, wenn der Kurzfilm veröffentlicht wird!",
   "EMAIL_PLACEHOLDER": "Deine E-Mail-Adresse",
-  "NOTIFY_ME": "Benachrichtige mich"
+  "NOTIFY_ME": "Benachrichtige mich",
+  "HOME": "Startseite",
+  "ABOUT": "Über", 
+  "CONTACT": "Kontakt",
+  "Days": "Tage",
+  "Hours": "Stunden",
+  "Minutes": "Minuten",
+  "Seconds": "Sekunden"
 }

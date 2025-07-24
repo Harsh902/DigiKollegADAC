@@ -8,19 +8,22 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
   imports: [CountdownComponent, TranslateModule],
   template: `
     <section class="hero">
+          <div class="movie-title">
+            <h3>Beyond Borders</h3>
+      </div>
       <div class="countdown-timer">
         <app-countdown></app-countdown>
       </div>
-            <div class="release-date">
-        <h2>Premieres July 25, 2025</h2>
+      <div class="release-date-box">
+        <h2 class="release-date">{{ 'RELEASE_DATE' | translate }}</h2>
       </div>
       <div class="signup-box">
         <div class="signup-inner-box">
-          <h3>Sign up to get notified when the movie is out!</h3>
+          <h3>{{ 'SIGNUP_TITLE' | translate }}</h3>
           <div class="mailchimp-form">
             <form action="#" method="post" target="_blank" novalidate>
-              <input type="email" name="EMAIL" placeholder="Your email address" required>
-              <button type="submit">Notify Me</button>
+              <input type="email" name="EMAIL" placeholder="{{ 'EMAIL_PLACEHOLDER' | translate }}" required>
+              <button type="submit">{{ 'NOTIFY_ME' | translate }}</button>
             </form>
           </div>
         </div>
@@ -30,8 +33,5 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
   styleUrls: ['./app.component.scss']
 })
 export class HomeComponent {
-  constructor(private translate: TranslateService) {
-    translate.setDefaultLang('en');
-    translate.use('en'); // Switch dynamically
-  }
+  constructor(private translate: TranslateService) {}
 }

@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   template: `
     <div class="page-content">
       <h2>About Us</h2>
-      <p>This is a demo movie website. Here you can find information about the movie, its release date, and sign up to be notified when it is out. More details about the team and project will be added soon.</p>
+      <p>This is a demo  website. Here you can find information about the movie, its release date, and sign up to be notified when it is out. More details about the team and project will be added soon.</p>
     </div>
   `,
   styles: [`

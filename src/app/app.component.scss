@@ -1,3 +1,12 @@
+.release-date-box {
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  padding: 0.7rem 1.1rem;
+  display: inline-block;
+  margin-top: 0.7rem;
+  max-width: 320px;
+}
 .mailchimp-form input[type="email"] {
   display: block;
   width: 100%;
@@ -47,7 +56,7 @@
   color: #00205b;
 }
 // Match release-date and signup-box text color to countdown color
-.release-date, .signup-box h3 {
+.release-date {
   color: #00205b;
 }
 // Home hero section alignment
@@ -90,6 +99,7 @@
   position: sticky;
   top: 0;
   z-index: 10;
+  min-height: 4.5rem;
 }
 .nav-container {
   max-width: 900px;
@@ -97,14 +107,20 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.5rem 1.5rem;
+  padding: 1.2rem 2rem;
 }
 .nav-logo {
-  font-size: 1.7rem;
-  font-weight: 700;
+  font-size: 2rem;
+  font-weight: 600;
   color: #ffe600;
   text-decoration: none;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.03em;
+  display: flex;
+  align-items: center;
+}
+.nav-logo img {
+  height: 3rem;
+  margin-right: 1rem;
 }
 .nav-links {
   list-style: none;

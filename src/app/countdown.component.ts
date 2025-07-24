@@ -1,33 +1,35 @@
 import { Component, OnInit, Inject, PLATFORM_ID } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
+import { TranslateService, TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-countdown',
   standalone: true,
+  imports: [TranslateModule],
   template: `
     <div class="countdown">
       <div class="countdown-item">
         <span class="countdown-value">{{ days }}</span>
-        <span class="countdown-label">Days</span>
+        <span class="countdown-label">{{ 'Days' | translate }}</span>
       </div>
       <div class="countdown-item">
         <span class="countdown-value">{{ hours }}</span>
-        <span class="countdown-label">Hours</span>
+        <span class="countdown-label">{{ 'Hours' | translate }}</span>
       </div>
       <div class="countdown-item">
         <span class="countdown-value">{{ minutes }}</span>
-        <span class="countdown-label">Minutes</span>
+        <span class="countdown-label">{{ 'Minutes' | translate }}</span>
       </div>
       <div class="countdown-item">
         <span class="countdown-value">{{ seconds }}</span>
-        <span class="countdown-label">Seconds</span>
+        <span class="countdown-label">{{ 'Seconds' | translate }}</span>
       </div>
     </div>
   `,
   styleUrls: ['./countdown.component.scss']
 })
 export class CountdownComponent implements OnInit {
-  targetDate = new Date('2025-07-25T00:00:00');
+  targetDate = new Date('2025-10-16T00:00:00');
   days = 0;
   hours = 0;
   minutes = 0;

@@ -1,7 +1,14 @@
 {
-  "MOVIE_TITLE": "název filmu",
-  "RELEASE_DATE": "Premiéra 25. července 2025",
-  "SIGNUP_TITLE": "Přihlaste se k odběru upozornění, až bude film dostupný!",
+  "MOVIE_TITLE": "Krátký film",
+  "RELEASE_DATE": "Premiéra 16. října 2025",
+  "SIGNUP_TITLE": "Zaregistrujte se, abyste dostali upozornění, až bude krátký film k dispozici!",
   "EMAIL_PLACEHOLDER": "Váš e-mail",
-  "NOTIFY_ME": "Upozornit mě"
+  "NOTIFY_ME": "Upozornit mě",
+  "HOME": "Domů",
+  "ABOUT": "O filmu",
+  "CONTACT": "Kontakt",
+  "Days": "Dny",
+  "Hours": "Hodiny",
+  "Minutes": "Minuty",
+  "Seconds": "Sekundy"
 }
