@@ -1,3 +1,74 @@
+.video-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+.video-modal-content {
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.25);
+  padding: 1.5rem 1.5rem 1rem 1.5rem;
+  position: relative;
+  z-index: 1001;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.video-modal-content video {
+  border-radius: 0.5rem;
+  max-width: 90vw;
+  max-height: 70vh;
+}
+.video-modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.5);
+  z-index: 1000;
+}
+.close-btn {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.7rem;
+  background: transparent;
+  border: none;
+  font-size: 2rem;
+  color: #e2001a;
+  cursor: pointer;
+  z-index: 1002;
+}
+.video-button-box {
+  display: flex;
+  justify-content: center;
+  margin-top: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.play-video-btn {
+  background: #e2001a;
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.6rem 1.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  width: 100%;
+  margin-left: 0;
+}
+.play-video-btn:hover {
+  background: #ffe600;
+  color: #00205b;
+}
 .release-date-box {
   background: #fff;
   border-radius: 1rem;

@@ -1,11 +1,14 @@
 import { Component } from '@angular/core';
 import { CountdownComponent } from './countdown.component';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { HttpClient } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CountdownComponent, TranslateModule],
+  imports: [CountdownComponent, TranslateModule, FormsModule, CommonModule],
   template: `
     <section class="hero">
           <div class="movie-title">
@@ -15,16 +18,31 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
         <app-countdown></app-countdown>
       </div>
       <div class="release-date-box">
-        <h2 class="release-date">{{ 'RELEASE_DATE' | translate }}</h2>
+        <h2 class="release-date">{{ 'MOVIE_TITLE' | translate }} {{ 'RELEASE_DATE' | translate }}</h2>
+      </div>
+      <div class="video-button-box">
+        <button (click)="toggleVideo()" class="play-video-btn">Play Trailer</button>
+      </div>
+      <div *ngIf="showVideo" class="video-modal">
+        <div class="video-modal-content">
+          <button class="close-btn" (click)="toggleVideo()">&times;</button>
+          <video width="560" height="315" controls autoplay>
+            <source src="/assets/videos/VID-20250724-WA0006.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="video-modal-backdrop" (click)="showVideo = false"></div>
       </div>
       <div class="signup-box">
         <div class="signup-inner-box">
           <h3>{{ 'SIGNUP_TITLE' | translate }}</h3>
           <div class="mailchimp-form">
-            <form action="#" method="post" target="_blank" novalidate>
-              <input type="email" name="EMAIL" placeholder="{{ 'EMAIL_PLACEHOLDER' | translate }}" required>
+            <form (ngSubmit)="submitEmail()" #signupForm="ngForm">
+              <input type="email" name="EMAIL" [(ngModel)]="email" required placeholder="{{ 'EMAIL_PLACEHOLDER' | translate }}">
               <button type="submit">{{ 'NOTIFY_ME' | translate }}</button>
             </form>
+            <div *ngIf="success">Thank you for signing up!</div>
+            <div *ngIf="error">{{ error }}</div>
           </div>
         </div>
       </div>
@@ -33,5 +51,34 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
   styleUrls: ['./app.component.scss']
 })
 export class HomeComponent {
-  constructor(private translate: TranslateService) {}
+  email = '';
+  success = false;
+  error = '';
+
+  showVideo = false;
+
+  toggleVideo() {
+    this.showVideo = !this.showVideo;
+  }
+
+  constructor(private translate: TranslateService, private http: HttpClient) {}
+
+  submitEmail() {
+    if (!this.email) {
+      this.error = 'Please enter a valid email.';
+      this.success = false;
+      return;
+    }
+    this.http.post('http://localhost:3000/api/signup', { email: this.email }).subscribe({
+      next: () => {
+        this.success = true;
+        this.error = '';
+        this.email = '';
+      },
+      error: () => {
+        this.error = 'Signup failed. Try again.';
+        this.success = false;
+      }
+    });
+  }
 }
