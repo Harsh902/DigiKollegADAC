@@ -14,5 +14,7 @@
   "Play Trailer": "Přehrát trailer",
   "ABOUT_DESCRIPTION": "Toto je krátký film, který ukazuje krásnou krajinu východního Bavorska a inspiruje cestovatele k návštěvě této nádherné části světa!",
   "CONTACT_DESCRIPTION": "Pro dotazy nám prosím napište na info@adacteam2.com.",
-  "SIGNUP": "Děkujeme za registraci!"
+  "SIGNUP": "Děkujeme za registraci!",
+  "EMAIL_ERROR": "Zadejte prosím platnou e-mailovou adresu.",
+  "SIGNUP_FAILED": "Registrace se nezdařila. Zkuste to prosím znovu."
 }

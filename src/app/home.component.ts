@@ -65,7 +65,7 @@ export class HomeComponent {
 
   submitEmail() {
     if (!this.email) {
-      this.error = 'Please enter a valid email.';
+      this.error = this.translate.instant('EMAIL_ERROR');
       this.success = false;
       return;
     }
@@ -76,7 +76,7 @@ export class HomeComponent {
         this.email = '';
       },
       error: () => {
-        this.error = 'Signup failed. Try again.';
+        this.error = this.translate.instant('SIGNUP_FAILED');
         this.success = false;
       }
     });

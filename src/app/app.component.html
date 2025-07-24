@@ -172,14 +172,13 @@
 
 <nav class="navbar">
   <div class="nav-container">
-    <a class="nav-logo" routerLink="/">
-      <img src="../assets/images/ADM-2022-0206 ADAC Rallye WM 2023_Logo_221012_neg_CMYK.png" alt="Logo" style="height:2.1rem; vertical-align:middle; margin-right:0.7rem;" />
+    <a class="nav-logo" href="https://www.centraleuropeanrally.eu/" target="_blank" rel="noopener">
+      <img src="../assets/images/ADM-2022-0206 ADAC Rallye WM 2023_Logo_221012_neg_CMYK.png" alt="Logo" style="height:3.5rem; vertical-align:middle; margin-right:1.2rem;" />
     </a>
     <ul class="nav-links">
       <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">{{ 'HOME' | translate }}</a></li>
       <li><a routerLink="/about" routerLinkActive="active">{{ 'ABOUT' | translate }}</a></li>
       <li><a routerLink="/contact" routerLinkActive="active">{{ 'CONTACT' | translate }}</a></li>
-      <li><a href="https://www.centraleuropeanrally.eu/" target="_blank" rel="noopener">CER</a></li>
       <li><app-language-switcher></app-language-switcher></li>
     </ul>
   </div>
