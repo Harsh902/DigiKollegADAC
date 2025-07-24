@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
   template: `
     <div class="page-content">
-      <h2>Contact</h2>
-    <p>For inquiries, please email us at info&#64;movie-name.com or use the contact form (coming soon).</p>
+      <h2>{{ 'CONTACT' | translate }}</h2>
+    <p>{{ 'CONTACT_DESCRIPTION' | translate }}</p>
     </div>
   `,
   styles: [`
@@ -14,6 +15,9 @@ import { Component } from '@angular/core';
     h2 { color: #00205b; }
     p { color: #222; }
     a { color: #00205b; }
-  `]
+  `],
+  imports: [TranslateModule]
 })
-export class ContactComponent {}
+export class ContactComponent {
+  constructor(private translate: TranslateService) {}
+}

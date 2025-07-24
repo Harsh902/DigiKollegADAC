@@ -41,7 +41,7 @@ import { CommonModule } from '@angular/common';
               <input type="email" name="EMAIL" [(ngModel)]="email" required placeholder="{{ 'EMAIL_PLACEHOLDER' | translate }}">
               <button type="submit">{{ 'NOTIFY_ME' | translate }}</button>
             </form>
-            <div *ngIf="success">Thank you for signing up!</div>
+            <div *ngIf="success">{{ 'SIGNUP' | translate }}</div>
             <div *ngIf="error">{{ error }}</div>
           </div>
         </div>
