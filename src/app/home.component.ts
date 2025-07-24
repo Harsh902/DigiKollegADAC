@@ -21,7 +21,7 @@ import { CommonModule } from '@angular/common';
         <h2 class="release-date">{{ 'MOVIE_TITLE' | translate }} {{ 'RELEASE_DATE' | translate }}</h2>
       </div>
       <div class="video-button-box">
-        <button (click)="toggleVideo()" class="play-video-btn">Play Trailer</button>
+        <button (click)="toggleVideo()" class="play-video-btn">{{ 'Play Trailer' | translate }}</button>
       </div>
       <div *ngIf="showVideo" class="video-modal">
         <div class="video-modal-content">
