@@ -29,7 +29,8 @@ import { TranslateService, TranslateModule } from '@ngx-translate/core';
   styleUrls: ['./countdown.component.scss']
 })
 export class CountdownComponent implements OnInit {
-  targetDate = new Date('2025-10-16T00:00:00');
+  // Set the target date for the countdown
+  targetDate = new Date('2025-10-01T00:00:00');
   days = 0;
   hours = 0;
   minutes = 0;

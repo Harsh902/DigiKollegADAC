@@ -4,6 +4,7 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { HttpClient } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { environment } from '../environments/environment';
 
 @Component({
   selector: 'app-home',
@@ -69,7 +70,7 @@ export class HomeComponent {
       this.success = false;
       return;
     }
-    this.http.post('http://localhost:3000/api/signup', { email: this.email }).subscribe({
+    this.http.post(`${environment.apiUrl}/api/signup`, { email: this.email }).subscribe({
       next: () => {
         this.success = true;
         this.error = '';
